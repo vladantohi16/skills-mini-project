@@ -53,4 +53,19 @@ class CalculatorTest {
     void squareRoot_ofNegativeNumber_shouldThrow() {
         assertThrows(IllegalArgumentException.class, () -> calculator.squareRoot(-1));
     }
+
+    @Test
+    void average_shouldReturnMean() {
+        assertEquals(3, calculator.average(2, 4));
+    }
+
+    @Test
+    void average_ofNaN_shouldThrow() {
+        assertThrows(IllegalArgumentException.class, () -> calculator.average(Double.NaN, 4));
+    }
+
+    @Test
+    void average_ofInfinite_shouldThrow() {
+        assertThrows(IllegalArgumentException.class, () -> calculator.average(Double.POSITIVE_INFINITY, 4));
+    }
 }

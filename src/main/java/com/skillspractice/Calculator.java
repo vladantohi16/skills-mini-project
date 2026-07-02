@@ -42,4 +42,14 @@ public class Calculator {
         }
         return Math.sqrt(value);
     }
+
+    public double average(double a, double b) {
+        if (Double.isNaN(a) || Double.isNaN(b)) {
+            throw new IllegalArgumentException("Average is not defined for NaN input");
+        }
+        if (Double.isInfinite(a) || Double.isInfinite(b)) {
+            throw new IllegalArgumentException("Average is not defined for infinite input");
+        }
+        return (a + b) / 2;
+    }
 }
