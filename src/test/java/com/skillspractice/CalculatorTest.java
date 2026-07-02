@@ -43,4 +43,14 @@ class CalculatorTest {
     void factorial_ofNegativeNumber_shouldThrow() {
         assertThrows(IllegalArgumentException.class, () -> calculator.factorial(-1));
     }
+
+    @Test
+    void squareRoot_shouldReturnCorrectValue() {
+        assertEquals(4, calculator.squareRoot(16));
+    }
+
+    @Test
+    void squareRoot_ofNegativeNumber_shouldThrow() {
+        assertThrows(IllegalArgumentException.class, () -> calculator.squareRoot(-1));
+    }
 }

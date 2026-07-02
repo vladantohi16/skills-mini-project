@@ -35,4 +35,11 @@ public class Calculator {
         }
         return result;
     }
+
+    public double squareRoot(double value) {
+        if (value < 0) {
+            throw new IllegalArgumentException("Cannot compute square root of a negative number");
+        }
+        return Math.sqrt(value);
+    }
 }
