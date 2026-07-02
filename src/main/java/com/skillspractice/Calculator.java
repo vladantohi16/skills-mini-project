@@ -35,4 +35,8 @@ public class Calculator {
         }
         return result;
     }
+
+    public double power(double base, int exponent) {
+        return Math.pow(base, exponent);
+    }
 }
